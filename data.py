@@ -348,7 +348,7 @@ class ColonyDAGANDataset(DAGANDataset):
                                                    gen_batches)
 
     def load_dataset(self, gan_training_index):
-        self.x = np.load("datasets/my_data.npy")
+        self.x = np.load("datasets/my_database.npy")
         self.x = self.x / np.max(self.x)
         x_train, x_test, x_val = self.x[:1200], self.x[1200:1600], self.x[1600:]
         x_train = x_train[:gan_training_index]
